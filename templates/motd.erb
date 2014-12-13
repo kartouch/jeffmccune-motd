@@ -1,5 +1,5 @@
 -------------------------------------------------
-Welcome to the host named <%= hostname %>
+Welcome <%= id %> to the host named <%= hostname %>
 <%= operatingsystem %> <%= operatingsystemrelease %> <% if has_variable?("architecture") then %><%= architecture %><% end %>
 -------------------------------------------------
 Puppet: <%= puppetversion %>
@@ -11,8 +11,17 @@ IP:   <%= ipaddress %>
 <% if has_variable?("processor0") then -%>
 Processor: <%= processor0 %>
 <% end -%>
+
 <% if has_variable?("memorysize") then -%>
 Memory:    <%= memorysize %>
+<% end -%>
+
+<% if has_variable?("kernel") then -%>
+    Kernel:    <%= kernel %>
+<% end -%>
+
+<% if has_variable?("kernelversion") then -%>
+    Kernelversion:    <%= kernelversion %>
 <% end -%>
 
 -------------------------------------------------
