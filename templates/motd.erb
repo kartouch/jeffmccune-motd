@@ -9,19 +9,15 @@ FQDN: <%= fqdn %>
 IP:   <%= ipaddress %>
 
 <% if has_variable?("processor0") then -%>
-Processor: <%= processor0 %>
+Processor:     <%= processor0 %>
 <% end -%>
-
 <% if has_variable?("memorysize") then -%>
-Memory:    <%= memorysize %>
+Memory:        <%= memorysize %>
 <% end -%>
-
 <% if has_variable?("kernel") then -%>
-    Kernel:    <%= kernel %>
+Kernel:        <%= kernel %>
 <% end -%>
-
 <% if has_variable?("kernelversion") then -%>
-    Kernelversion:    <%= kernelversion %>
+Kernelversion: <%= kernelversion %>
 <% end -%>
-
 -------------------------------------------------
